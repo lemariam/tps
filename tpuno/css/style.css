@@ -22,6 +22,11 @@ body{
 header{
 	height: 100px;
 }*/
+.banner-principal{
+
+
+	height: 380px;
+}
 .navbar{
 	
 	background-color: #debcb3;
@@ -82,6 +87,10 @@ p{
 	text-align: center;
 	
 
+}
+.img-carousel{
+	max-height: 370px;
+	width:auto;
 }
 .item img{
 	
