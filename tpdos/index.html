@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>MemoTest</title>
 </head>
+
 <body>
 
 <div class="container">
@@ -14,7 +15,7 @@
 		
 		<div class="col-sm-2" id="instrucciones">
 			<h3>Memo-xercise </h3>
-			<p>Haz click en el cerebro y descubre las parejas de imagenes de cientificos que cambiaron la historia, tienes x intentos para completar el juego...
+			<p>Haz click en Brainy y descubre las parejas de imagenes de cientificos que cambiaron la historia.</p><p>Tienes <span id="intentos"></span> intentos para completar el juego...
 			</p>
 			<h2>Suerte!!!</h2>
 			
@@ -108,7 +109,27 @@
 		</div>
 	</div>
 
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+  <!--      <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Felicidades!!!</h4>
+ -->      </div>
+      <div class="modal-body">
+      	<img src="img/lose.jpg"/>
+<!--        <p>Felicidades!! Has ganado.</p>
+ -->      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-morado" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 	
 </div>
 
