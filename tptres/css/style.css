@@ -1,0 +1,103 @@
+body{
+
+	background-image: url(../img/fondo5.jpg); 
+	
+}
+.btn-morado{
+	background-color: #86759E;
+	color: white;
+}
+#myModal.modal-body{
+	text-align: center;
+
+}
+#tabla-ranking
+{
+	margin-bottom: 10px;
+}
+#tabla-ranking td,th
+{
+	padding:5px;
+	text-align: center;
+	border:1px solid #eeeeee;
+}
+.modal-body img{
+
+	width: 400px;
+
+}
+#instrucciones{
+	/**width: 200px;
+	height: 400px;**/
+	background-color: #86759E;
+	color: white;
+}
+.tarjeta-container{
+
+	padding: 10px;
+	/*box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);*/
+}
+
+}
+.tarjeta{
+
+	border: 2px solid black;
+	height: 200px;
+}
+.gato{
+	border: 1px solid black;
+	width:100%;
+	height: 200px;
+	background-image: url("../img/brain2.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+.img-1{
+	border: 1px solid black;
+	width:100%;
+	height: 200px;
+	background-image: url("../img/adaLovelace.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.img-2{
+	border: 1px solid black;
+	width:100%;
+	height: 200px;
+	background-image: url("../img/chienS.png");
+	background-size: cover;
+	background-position: center;
+}
+.img-3{
+	border: 1px solid black;
+	width:100%;
+	height: 200px;
+	background-image: url("../img/graceHopper.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.img-4{
+	border: 1px solid black;
+	width:100%;
+	height: 200px;
+	background-image: url("../img/hipatia.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+.img-5{
+	border: 1px solid black;
+	width:100%;
+	height: 200px;
+	background-image: url("../img/mariecurie.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+.img-6{
+	border: 1px solid black;
+	width:100%;
+	height: 200px;
+	background-image: url("../img/marie-sophie.jpeg");
+	background-size: cover;
+	background-position: center;
+}

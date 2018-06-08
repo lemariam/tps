@@ -3,48 +3,63 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>MemoTest</title>
 </head>
 
 <body>
 
-<div class="container">
+<div class="container-fluid">
 
 	<div class="row" >
 		
 		<div class="col-sm-2" id="instrucciones">
 			<h3>Memo-xercise </h3>
-			<p>Haz click en Brainy y descubre las parejas de imagenes de cientificos que cambiaron la historia.</p><p>Tienes <span id="intentos"></span> intentos para completar el juego...
-			</p>
+			<p>Haz click en Brainy y descubre las parejas de imagenes de cientificos que cambiaron la historia.</p>
+			
 			<h2>Suerte!!!</h2>
+			<div id="ranking">
+				<table id="tabla-ranking">
+					<tr>
+						<th>Nombre</th>
+						<th>Puntuacion</th>
+					</tr>
+
+				</table>
+			</div>
+				
 			
 		</div>
-
+	
 		<div class="col-sm-10">
 
 			<div class="row">
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div  id=img-1 class="gato"></div>
+					<div  id=img-1-1 style="display:none"></div>
 
 				</div>
 
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-2 class="gato"></div>
+					<div id=img-2-1 style="display:none"></div>
 
 				</div>
 
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-3 class="gato"></div>
+					<div id=img-3-1 style="display:none"></div>
 
 				</div>
 
 				<div  class="col-sm-3 tarjeta-container">
 					
 					<div id=img-4 class="gato"></div>
+					<div  id=img-4-1 style="display:none"></div>
 
 				</div>
 
@@ -55,24 +70,28 @@
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-5 class="gato"></div>
+					<div  id=img-5-1 style="display:none"></div>
 
 				</div>
 
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-6 class="gato"></div>
+					<div  id=img-6-1 style="display:none"></div>
 
 				</div>
 
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-7 class="gato"></div>
+					<div  id=img-7-1 style="display:none"></div>
 
 				</div>
 
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-8 class="gato"></div>
+					<div  id=img-8-1 style="display:none"></div>
 
 				</div>
 
@@ -82,24 +101,28 @@
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-9 class="gato"></div>
+					<div  id=img-9-1 style="display:none"></div>
 
 				</div>
 
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-10 class="gato"></div>
+					<div  id=img-10-1 style="display:none"></div>
 
 				</div>
 
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-11 class="gato"></div>
+					<div  id=img-11-1 style="display:none"></div>
 
 				</div>
 
 				<div class="col-sm-3 tarjeta-container">
 					
 					<div id=img-12 class="gato"></div>
+					<div  id=img-12-1 style="display:none"></div>
 
 				</div>
 
@@ -110,6 +133,36 @@
 	</div>
 
 <!-- Modal -->
+<div id="usuarioModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+     </div>
+
+      <div class="modal-body col-sm-offset-4" >
+      	<section>
+      		<label >Nombre:</label> <br/>
+		<input id="usuario" type="text" name="nombre"/> <br/>
+		<label>Selecciona el nivel:</label> <br/>
+		
+		<input type="radio" name="dificultad" value="24" checked="checked">Facil<br/>
+			<input type="radio" name="dificultad" value="18">Medio<br/>
+			<input type="radio" name="dificultad" value="14">Dificl<br/>
+        
+      	</section>
+     </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-morado" data-dismiss="modal" id="comenzar" disabled="disabled">Comenzar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -134,6 +187,8 @@
 
 <script type="text/javascript" src="jquery/jquery.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+
 </body>
 </html>

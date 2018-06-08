@@ -39,19 +39,19 @@ $("div.tarjeta-container>div").on("click", function(e){
  		$("#intentos").html(maxClicks - clickCount); 
  		primerClick = 0;
  		$(this).removeClass("gato").addClass("img-" + arreglo[i-1]);
- 		//$(this).toggleClass("img-" + arreglo[i-1]);
+ 		
  		if (arreglo[i-1] != ultimaImagenVolteada)
  		{
  			if(clickCount >= maxClicks){
 	 			$("#myModal").modal();
-	 			//window.location.replace("index.html");
+	 			
 	 		}
  			setTimeout(
  				function()
 	 			{ 
 	 				$("#"+ultimoDiv).removeClass("img-"+ultimaImagenVolteada).addClass("gato");
 	 				$("#"+id).removeClass("img-"+arreglo[i-1]).addClass("gato");	
-	 				//ultimoDiv = id;
+	 				
 	 				primerClick=1;
 	 				
 	 			},
