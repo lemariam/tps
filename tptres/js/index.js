@@ -25,16 +25,18 @@ var primerClick = 1;
 var ganadas = new Array();
 $("#usuario").on("change",function()
 	{
-		if($(this).val().trim() != "" )
+		if($(this).val().trim() != "" ){
 			$("#comenzar").prop("disabled",false);
+	nombre=$('#usuario').val();
+	console.log(nombre);
+
+		}
 		else
 			$("#comenzar").prop("disabled",true);
 	});
 $('#comenzar').click(function(){
 	nombre=$('#usuario').val();
-	if(nombre=""){
-
-	}
+	console.log(nombre);
 
 });
 $('#usuarioModal').modal();
@@ -96,7 +98,7 @@ $("div.tarjeta-container>div").on("click", function(e){
  				});
  		});
  		
- 		if (arreglo[i-1] != ultimaImagenVolteada && 1==0)
+ 		if (arreglo[i-1] != ultimaImagenVolteada )
  		{
  			
  			terminocallback=false;
@@ -150,7 +152,7 @@ $("div.tarjeta-container>div").on("click", function(e){
  			//genero el new array de ganadas y muestro la felicitacion de ganada
  			primerClick = 1;
  			ganadas.push(arreglo[i-1]);
- 			if(ganadas.length >=1)
+ 			if(ganadas.length >=6)
  			{ 
 
  				var score= new Array();
