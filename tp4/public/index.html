@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Encuesta</title>
+</head>
+
+<script type="text/javascript" src="pupu/jquery.js"></script>
+<script type="text/javascript" >
+	var dataTabla;
+
+	$(document).ready(function(){
+		getPaises();
+		
+		if(localStorage.getItem("form") != null)
+			cargarTabla(JSON.parse(localStorage.getItem("form")));
+
+		$("#enviar").on("click",function(){
+			var pais = $("#paises").val();
+			var lenguaje = $("input[name='lenguaje']:checked").val();
+			var sistema = $("input[name='sistema']:checked").val();
+			var genero = $("input[name='genero']:checked").val();
+			var trabajo = $("input[name='trabajo']:checked").val();
+
+			var form = {
+				"pais":pais,
+				"lenguaje":lenguaje,
+				"sistema":sistema,
+				"genero":genero,
+				"trabajo":trabajo
+			}
+			var dataTabla = new Array();
+			if(localStorage.getItem("form") != null)
+				dataTabla = JSON.parse(localStorage.getItem("form"));
+			dataTabla.push(form);
+
+			localStorage.setItem("form",JSON.stringify(dataTabla));
+			cargarTabla(dataTabla);
+		});
+		
+
+
+
+	});
+
+	function cargarPaises(paises, idElement)
+	{
+		var html = "";
+		$.each(paises,function(index,value){
+			html += "<option value=\""+value.codigo+"\" >"+ value.nombre +"</option>";
+
+		});
+		$("#"+ idElement).html(html);
+	}
+	function getPaises(){
+		$.ajax({
+			url: "http://localhost:3000/api/paises",
+			type:"GET",
+			contentType:"application/json",
+			success:function(response){
+				cargarPaises(response.paises, "paises");
+			},
+			error:function(response){
+				alert("error");
+			}
+
+		});
+	}
+	function cargarTabla(dataTabla){
+		console.log(dataTabla);
+		var html = "<table><thead><tr>";
+		html += "<th>Pais</th><th>Lenguaje</th><th>Sistema</th><th>Genero</th><th>Trabajo</th></thead><tbody>";
+
+		$.each(dataTabla,function(index,value){
+			html += "<tr><td>"+ value.pais + "</td><td>"+ value.lenguaje + "</td><td>"+ value.sistema +"</td><td>"+ value.genero +"</td><td>"+ value.trabajo +"</td><tr>";
+		});
+		html += "</tbody></table>";
+		$("#cuadro").html(html);
+	}
+
+</script>
+<body>
+	<form>
+		<h1>Encuesta de Tecnologia</h1>
+
+		<div id="pais">
+
+			<label>Pais de residencia:</label> <br/>
+        	<select name="pais" id="paises" ></select>
+			
+		</div>
+
+		<div id="preferido">
+
+			<label>Lenguaje de programacion preferido:</label> <br/>
+        	<input type="radio" name="lenguaje" value="java" checked>Java <br/>	
+        	<input type="radio" name="lenguaje" value="php">PHP <br>
+        	<input type="radio" name="lenguaje" value="javascript">JavaScript <br>
+
+        	<label>Sistema operativo preferido:</label> <br/>
+        	<input type="radio" name="sistema" value="linux" checked>Linux <br/>	
+        	<input type="radio" name="sistema" value="windows">Windows <br>
+        	<input type="radio" name="sistema" value="solaris">Solaris <br>
+
+        	<label>Genero:</label> <br/>
+       		<input type="radio" name="genero" value="masculino" checked>Masculino <br/>	
+        	<input type="radio" name="genero" value="femenino">Femenino <br>
+
+        	<label>Formato de trabajo:</label> <br/>
+        	<input type="radio" name="trabajo" value="relacion de dependencia" checked>Relacion de dependencia <br/>	
+        	<input type="radio" name="trabajo" value="autonomo">Autonomo <br>
+        
+        	<button type="button" id="enviar">Enviar</button>
+        	
+        	<div id="cuadro">
+		
+			</div>
+   
+
+		</div>
+
+
+	</form>
+
+	
+
+</body>
+</html>

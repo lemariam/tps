@@ -1,0 +1,42 @@
+body{
+	background-color: #0B8686;
+
+
+}
+form{
+	background-color: #569CA5;
+	width: 70%;
+	color: #F2F7F7;
+	margin-left: 220px;
+	text-align: center;
+
+  	
+	
+}
+button{
+	background-color: #0B8686;
+	color: #F2F7F7;
+}
+select{
+	background-color: #0B8686;
+	color: #F2F7F7;
+}
+
+#cuadro
+{
+	margin-bottom: 50px;
+	
+}
+#cuadro table{
+	border-collapse: collapse;
+}
+#cuadro td,th
+{
+	padding:5px;
+	text-align: center;
+	border:1px solid #eeeeee;
+}
+label{
+	font-weight: bold;
+	text-align: right;
+}
