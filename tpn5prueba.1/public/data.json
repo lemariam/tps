@@ -1,0 +1,58 @@
+{
+	"perros":[
+		{
+			"id":1,
+			"nombre":"pepe",
+			"raza": "setter",
+			"tamano":"medio",
+			"imagen":"bello.jpg",
+			"favorito": true
+
+		},
+
+		{
+			"id":2,
+			"nombre":"firulais",
+			"raza":"huskie" ,
+			"tamano":"grande",
+			"imagen":"huskie.jpg",
+			"favorito": true
+		},
+
+		{
+			"id":3,
+			"nombre":"gizmo",
+			"raza": "gremlin",
+			"tamano":"pequeno",
+			"imagen":"cacri.jpg",
+			"favorito": true
+		},
+
+		{
+			"id":4,
+			"nombre":"tequila",
+			"raza": "chihuahua",
+			"tamano":"pequeno",
+			"imagen":"tequila.jpeg",
+			"favorito": false
+		},
+
+		{
+			"id":5,
+			"nombre":"bombom",
+			"raza": "pastor escoses",
+			"tamano":"grande",
+			"imagen":"cuchi.jpg",
+			"favorito":false
+		},
+
+		{
+			"id":6,
+			"nombre":"george",
+			"raza": "mucuchies",
+			"tamano":"grande",
+			"imagen":"mucuchies.jpg",
+			"favorito":false
+		}
+	]
+}	

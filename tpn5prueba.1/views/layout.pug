@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="/stylesheets/bootstrap/css/bootstrap.css")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.1.0/css/all.css", integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous")
+    script(src='/javascripts/jquery/jquery.js')
+    script(src='/javascripts/bootstrap/js/bootstrap.min.js')
+    script(src='/javascripts/index.js')
+  body
+    .container-flow
+      header 
+        h3 CAN-CAN
+      div(class="row",style="padding:30px")
+        div(class="col-sm-3")
+          div(class="col-sm-12", style="margin-bottom:10px")
+            label(for="razas") Razas:
+            select(id="razas", name="razas", class="form-control")
+          div(class="col-sm-12", style="margin-bottom:10px")
+            label(for="tamano") Tamaño:
+            select(id="tamano", name="tamano", class="form-control")
+          div(class="col-sm-12")
+            button(class="btn btn-primary btn-block") Filtrar
+        div(class="col-sm-9")
+          div(class="row")
+            block content

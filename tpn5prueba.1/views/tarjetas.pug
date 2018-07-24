@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div(class="row")
+        for perro in perros
+            div(class="col-sm-4 card")
+                img(class="card-img-top", src="/images/" + perro.imagen)
+                div(class="card-body")
+                    h4(class="card-title")= perro.nombre
+                    if perro.favorito
+                        span(class="glyphicon glyphicon-star", aria-hidden="true")
+                    else
+                        span(class="glyphicon glyphicon-star-empty", aria-hidden="true")

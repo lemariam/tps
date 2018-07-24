@@ -1,0 +1,16 @@
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image:url(../images/perroslatinos.jpg);
+}
+
+a {
+  color: #00B7FF;
+}
+
+header{
+  width:100%;
+  background-color:black;
+  color:white;
+  padding:10px;
+}
