@@ -1,6 +1,7 @@
 $(document).ready(function(){
     console.log("listo"); 
     getRazas();
+    getTamanos();
     // $(".card").on("click",function(){
     //     var id = $(this).data("id");
     //     getPerro(id);
@@ -10,6 +11,7 @@ $(document).ready(function(){
     //     $("ul.pagination li").removeClass("active");
     //     $(this).addClass("active");
     // })
+
 
 });
 function getPerro(id){
@@ -27,40 +29,49 @@ function getRazas(){
             console.log(response);
         },
         error:function(){
-            alert("error");
+            alert("error trayendo razas");
         }
     });
 }
-$(document).ready(function(){
-    console.log("listo"); 
-    getTamano();
-    // $(".card").on("click",function(){
-    //     var id = $(this).data("id");
-    //     getPerro(id);
-    // });
-    $("#pag-" + $("#page").val()).addClass("active");
-    // $("ul.pagination li").on("click", function(){
-    //     $("ul.pagination li").removeClass("active");
-    //     $(this).addClass("active");
-    // })
 
-});
-function getPerro(id){
-    console.log("Hola:" +id );
-}
-function getTamano(){
+function getTamanos(){
     $.ajax({
-        url:"/tamano",
+        url:"/tamanos",
         method:"get",
         contentType:"application/json",
         success:function(response){
             $.each(response,function(index, value){
-                $("#tamano").append("<option value='" + value + "'>"+value+"</option>");
+                $("#tamanos").append("<option value='" + value + "'>"+value+"</option>");
             });
             console.log(response);
         },
         error:function(){
-            alert("error");
+            alert("error trayendo tamano");
         }
     });
 }
+
+$()
+function filtrar(){
+    var raza = $("#razas").val();
+    var tamano = $("#tamanos").val();
+    window.location.href = "/perros/raza/" + raza + "/tamano/" + tamano;
+}
+ function getPerrosFiltrados(){
+   var raza = $("#razas").val();
+     var tamano = $("#tamanos").val();
+     $.ajax({
+         url:"/perros/" + raza + "/" + tamano,
+         method:"get",
+         contentType:"application/json",
+         success:function(response){
+             $.each(response,function(index, value){
+                 $("#tamanos").append("<option value='" + value + "'>"+value+"</option>");
+             });
+            console.log(response);
+         },
+         error:function(){
+             alert("error");
+         }
+     });
+ }

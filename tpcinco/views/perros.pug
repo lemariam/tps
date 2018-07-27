@@ -9,16 +9,16 @@ block content
 				div(class="card-body")
 					h4(class="card-title")= perro.nombre
 					if perro.favorito
-						a(href="/perros/" +page+ "/fav/" + perro.id)
+						a(href="/page/" +page+ "/fav/" + perro.id)
 							i(class="far fa-star")
 					else
-						a(href="/perros/" +page+ "/nofav/" + perro.id)
+						a(href="/page/" +page+ "/nofav/" + perro.id)
 							i(class="fas fa-star")
 						
 	div(class="row", style="margin-top:20px;width:100%")
 		nav(style="width:100%")
 			ul(class="pagination pagination-sm justify-content-center")
 				li(class="page-item", id="pag-1")
-					a(class="page-link", href="/perros/1") 1
+					a(class="page-link", href="/page/1") 1
 				li(class="page-item", id="pag-2")
-					a(class="page-link", href="/perros/2") 2
+					a(class="page-link", href="/page/2") 2

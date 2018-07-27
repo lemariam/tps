@@ -13,16 +13,20 @@ html
     .container-flow
       header 
         h3 CAN-CAN
+      
       div(class="row",style="padding:30px")
         div(class="col-sm-3")
-          div(class="col-sm-12", style="margin-bottom:10px")
-            label(for="razas") Razas:
-            select(id="razas", name="razas", class="form-control")
-          div(class="col-sm-12", style="margin-bottom:10px")
-            label(for="tamano") Tamaño:
-            select(id="tamano", name="tamano", class="form-control")
-          div(class="col-sm-12")
-            button(class="btn btn-primary btn-block") Filtrar
+          form(id="filtro", action="/", method="post")
+            div(class="col-sm-12", style="margin-bottom:10px")
+              label(for="razas") Razas:
+              select(id="razas", name="razas", class="form-control")
+                option(value="") -- Seleccione raza --
+            div(class="col-sm-12", style="margin-bottom:10px")
+              label(for="tamanos") Tamaños:
+              select(id="tamanos", name="tamanos", class="form-control")
+                option(value="") -- Seleccione tamaño --
+            div(class="col-sm-12")
+              button(type="submit", class="btn btn-primary btn-block") Filtrar
         div(class="col-sm-9")
           div(class="row")
             block content

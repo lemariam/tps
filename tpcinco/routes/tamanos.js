@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-var razas = ["Setter","Huskie","Gremlin","chiguagua","Pastor Escoces","Mucuchies"];
+var tamanos = ["pequeno","mediano","grande"];
 	
 
 /* GET users listing. */
 //router.get('/:pag', function(req, res, next) {
 router.use(express.json());
 router.get('/', function(req, res, next) {
-	res.send(razas);
+	res.send(tamanos);
 });
 
 module.exports = router;
